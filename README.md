@@ -1,2 +1,2 @@
 # PrePocess
-the image data prepocessing
+the image data prepocessing code
