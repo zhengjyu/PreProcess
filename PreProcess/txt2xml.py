@@ -1,3 +1,4 @@
+# -*- coding utf-8 -*-
 import os
 from xml.dom.minidom import Document
 import cv2

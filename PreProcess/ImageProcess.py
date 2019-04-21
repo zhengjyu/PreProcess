@@ -157,14 +157,10 @@ def ImageBlack(src):
 
 
 if __name__ == '__main__':
-    image = cv2.imread("E:/picture/src.jpg")
+    image = cv2.imread("src.jpg")
     cv2.imshow("Original", image)
     # dst = ImageFlip(image, 3)
     # dst = ImageRotate(image, 275)
     # dst = ImageEnhance(image, 0.5)
     # dst = ImageShape(image, 4, 0.1)
     dst = ImageCrop(image)
-    # dst = ImageBlack(image)
-    # cv2.imshow("C", dst)
-    # cv2.imwrite("E:/picture/B5.jpg", dst)
-    # cv2.waitKey(0)
