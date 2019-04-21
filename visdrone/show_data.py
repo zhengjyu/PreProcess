@@ -1,5 +1,5 @@
 import os
-from PreProcess.Show_Image_Label import paint_video_txt
+from PreProcess.show_image_label import paint_video_txt
 
 
 if __name__ == '__main__':

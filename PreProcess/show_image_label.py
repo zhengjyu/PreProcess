@@ -26,6 +26,7 @@ def paint_video_txt(video_path, annotations_txt, show_anno=1):
     pass
 
 
+# paint image with an annotation xml
 def paint_image_xml(image_file, annotations_file, show_anno=1, is_video=0):
     image = cv2.imread(image_file)
     if show_anno:

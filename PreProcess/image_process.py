@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*
 import cv2
 import numpy as np
+
+
 # Flip
 def ImageFlip(src, select):
     """
@@ -19,6 +21,7 @@ def ImageFlip(src, select):
     else:
         dst = cv2.flip(src, -1)
     return dst
+
 
 # Rotate
 def ImageRotate(src, angle):

@@ -4,6 +4,8 @@ from xml.dom.minidom import Document
 import cv2
 import numpy as np
 
+
+# transform txt to xml
 def generate_xml(img_name, lines, img_size, name_class):
     doc = Document()
 
@@ -58,6 +60,7 @@ def generate_xml(img_name, lines, img_size, name_class):
         append_xml_node_attr('ymax', parent=bb, text=str(y2))
     return doc
 
+
 if __name__ == '__main__':
     annpath = "/media/lirun/04962EB6962EA7DE/tju/data/VisDrone2018-DET-val/annotations"
     imagepath = "/media/lirun/04962EB6962EA7DE/tju/data/UAV/VOCdevkit2007/VOC2007/JPEGImages"
@@ -83,9 +86,6 @@ if __name__ == '__main__':
     #         if cls == '0' or cls == '11':
     #             numignore += 1
     #         num += 1
-    #
-    # print num, numignore
-
 
         img = cv2.imread(os.path.join(imagepath, txtfile.replace('txt', 'jpg')))
         img_size = img.shape

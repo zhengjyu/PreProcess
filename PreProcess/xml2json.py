@@ -142,7 +142,7 @@ def parseXmlFiles(xml_path, files):
                     object_name = subelem.text
                     if object_name not in category_set:
                         current_category_id = addCatItem(object_name)
-                        print "***************************************************************"
+                        print("***************************************************************")
                     else:
                         current_category_id = category_set[object_name]
 
@@ -189,5 +189,5 @@ if __name__ == '__main__':
         xml_files = f.readlines()
     parseXmlFiles(xml_path, xml_files)
     # print coco['annotations']
-    print coco['categories']
+    print(coco['categories'])
     json.dump(coco, open(json_file, 'w+'))

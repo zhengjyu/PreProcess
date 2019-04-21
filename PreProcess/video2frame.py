@@ -2,6 +2,7 @@ import os
 import cv2
 
 
+# transform video to frame
 def get_frame(video_name, video_path, image_path, video_ext='mov', image_ext='jpg', interval=1):
     if not os.path.exists(os.path.join(image_path, video_name)):
         os.makedirs(os.path.join(image_path, video_name))

@@ -1,7 +1,7 @@
 import os
-import cv2
 
 
+# transform the space to comma in txt
 def space2comma_txt(src, dst):
     with open(src, 'r') as f:
         lines = f.readlines()
