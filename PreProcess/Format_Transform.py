@@ -1,7 +1,8 @@
 import os
 import cv2
 
-def space2comma(src, dst):
+
+def space2comma_txt(src, dst):
     with open(src, 'r') as f:
         lines = f.readlines()
     new_lines = []
@@ -12,7 +13,8 @@ def space2comma(src, dst):
     with open(dst, 'w+', newline='\n') as w:
         w.writelines(new_lines)
 
+
 if __name__ == '__main__':
     a_txt = 'E:/visdrone/2018/sot/VisDrone2018-SOT_toolkit/data/VisDrone2018/VisDrone2018-SOT-test-challenge/annotations/uav0000244_00479_s.txt'
     b_txt = 'E:/visdrone/2018/sot/VisDrone2018-SOT_toolkit/data/VisDrone2018/VisDrone2018-SOT-test-challenge/uav0000244_00479_s.txt'
-    space2comma(a_txt, b_txt)
+    space2comma_txt(a_txt, b_txt)
