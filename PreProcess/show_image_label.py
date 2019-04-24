@@ -35,6 +35,15 @@ def paint_image_xml(image_file, annotations_file, show_anno=1, is_video=0):
         objects = annotations_root.findall("object")
         for object in objects:
             name = object.find('name').text
+            if name != 'person':
+                print("2")
+                print(annotations_file)
+            occluded = object.find('occluded')
+            # print(occluded)
+            if occluded is not None:
+                occluded = int(occluded.text)
+                if occluded == 1:
+                    print(annotations_file)
             bndbox = object.find('bndbox')
             xmin = int(bndbox.find('xmin').text)
             ymin = int(bndbox.find('ymin').text)
@@ -49,3 +58,12 @@ def paint_image_xml(image_file, annotations_file, show_anno=1, is_video=0):
     else:
         cv2.waitKey(0)
 
+
+def paint_video_xml(video_path, annotations_path, show_anno=1):
+    images = os.listdir(video_path)
+    for i in range(len(images)):
+        image = images[i]
+        xml = image.replace('jpg', 'xml')
+        image_file = os.path.join(video_path, image)
+        xml_file = os.path.join(annotations_path, xml)
+        paint_image_xml(image_file, xml_file, 1, 1)

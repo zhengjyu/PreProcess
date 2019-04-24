@@ -1,7 +1,7 @@
 import os
 
 
-image_path = 'E:/visdrone/2019/data/visdrone2019_sot'
+image_path = 'E:/visdrone/2019/data/visdrone2019_sot/sequences'
 dirs = os.listdir(image_path)
 num = 0
 for dir in dirs:
