@@ -13,12 +13,21 @@ coco['annotations'] = []
 # category_set = dict()
 image_set = set()
 
-category_item_id = 0
+# category_item_id = 0
 image_id = 20180000000
 annotation_id = 0
-category_set = {'bicycle': 6, 'people': 2, 'car': 1, 'tricycle': 7, 'van-like-tricycle': 8, 'pedestrian': 9, 'truck': 4, 'motor': 5, 'bus': 10, 'van': 3}
-coco['categories'] = [{'supercategory': 'none', 'id': 1, 'name': 'car'}, {'supercategory': 'none', 'id': 2, 'name': 'people'}, {'supercategory': 'none', 'id': 3, 'name': 'van'}, {'supercategory': 'none', 'id': 4, 'name': 'truck'}, {'supercategory': 'none', 'id': 5, 'name': 'motor'}, {'supercategory': 'none', 'id': 6, 'name': 'bicycle'}, {'supercategory': 'none', 'id': 7, 'name': 'tricycle'}, {'supercategory': 'none', 'id': 8, 'name': 'van-like-tricycle'}, {'supercategory': 'none', 'id': 9, 'name': 'pedestrian'}, {'supercategory': 'none', 'id': 10, 'name': 'bus'}]
-
+category_set = {'pedestrian': 1, 'people': 2, 'bicycle': 3, 'car': 4, 'van': 5, 'truck': 6, 'tricycle': 7, 'awning-tricycle': 8, 'bus': 9, 'motor': 10}
+coco['categories'] = [{'supercategory': 'none', 'id': 1, 'name': 'pedestrian'},
+                      {'supercategory': 'none', 'id': 2, 'name': 'people'},
+                      {'supercategory': 'none', 'id': 3, 'name': 'bicycle'},
+                      {'supercategory': 'none', 'id': 4, 'name': 'car'},
+                      {'supercategory': 'none', 'id': 5, 'name': 'van'},
+                      {'supercategory': 'none', 'id': 6, 'name': 'truck'},
+                      {'supercategory': 'none', 'id': 7, 'name': 'tricycle'},
+                      {'supercategory': 'none', 'id': 8, 'name': 'awning-tricycle'},
+                      {'supercategory': 'none', 'id': 9, 'name': 'bus'},
+                      {'supercategory': 'none', 'id': 10, 'name': 'motor'}]
+category_item_id = len(category_set)
 def addCatItem(name):
     global category_item_id
     category_item = dict()
@@ -181,9 +190,12 @@ def parseXmlFiles(xml_path, files):
 
 
 if __name__ == '__main__':
-    xml_path = '/media/lirun/04962EB6962EA7DE/tju/detectron/detectron/datasets/data/VOC2007/VOCdevkit2007/VOC2007/Annotations'
-    json_file = '/media/lirun/04962EB6962EA7DE/tju/detectron/detectron/datasets/data/VOC2007/annotations/voc_2007_test.json'
-    xml_file_index = '/media/lirun/04962EB6962EA7DE/tju/detectron/detectron/datasets/data/VOC2007/VOCdevkit2007/VOC2007/ImageSets/Main/test.txt'
+    # xml_path = 'E:/data/mot/VisDrone2018-MOT-train/MOT2018/MOTdevkit2018/MOT2018/Annotations'
+    # json_file = 'E:/data/mot/VisDrone2018-MOT-train/MOT2018/annotations/mot_2018_train.json'
+    # xml_file_index = 'E:/data/mot/VisDrone2018-MOT-train/MOT2018/MOTdevkit2018/MOT2018/ImageSets/Main/train.txt'
+    xml_path = 'E:/data/mot/VisDrone2018-MOT-test-dev/Annotations'
+    json_file = 'E:/data/mot/VisDrone2018-MOT-test-dev/voc_2018_test.json'
+    xml_file_index = 'E:/data/mot/VisDrone2018-MOT-test-dev/test.txt'
     # print category_set
     with open(xml_file_index, 'r') as f:
         xml_files = f.readlines()

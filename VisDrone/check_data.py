@@ -40,5 +40,5 @@ def check_anno(data_path):
 
 if __name__ == '__main__':
     data_path = 'E:/visdrone/2019/data/VisDrone2019-SOT-test-challenge'
-    check_anno(data_path)
-    # check_init(data_path)
+    # check_anno(data_path)
+    check_init(data_path)

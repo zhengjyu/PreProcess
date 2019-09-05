@@ -1,4 +1,5 @@
 import os
+import re
 
 
 def image_rename(file_path):
@@ -59,14 +60,14 @@ def rename_visdrone(path):
 
 if __name__ == '__main__':
     file_path = 'E:/visdrone/2019/data/visdrone2019_sot/sequences'
-    xml_path = 'E:/visdrone/2019/data/visdrone2019_sot/annotations_xml'
-    rename_visdrone(xml_path)
-    # names = os.listdir(xml_path)
-    # for name in names:
-    #     print(name)
-        # image_rename(os.path.join(file_path, name))
-        # image_motify_name(os.path.join(file_path, name))
-        # xml_motify_name(os.path.join(xml_path, name))
-        # motify_etc(os.path.join(xml_path, name))
-    # path = "E:/visdrone/2019/data/visdrone2019_sot/sequences/26"
-    # image_rename(path)
+    # xml_path = 'E:/visdrone/2019/data/visdrone2019_sot/annotations_xml'
+    # rename_visdrone(xml_path)
+    # # names = os.listdir(xml_path)
+    # # for name in names:
+    # #     print(name)
+    #     # image_rename(os.path.join(file_path, name))
+    #     # image_motify_name(os.path.join(file_path, name))
+    #     # xml_motify_name(os.path.join(xml_path, name))
+    #     # motify_etc(os.path.join(xml_path, name))
+    # # path = "E:/visdrone/2019/data/visdrone2019_sot/sequences/26"
+    # # image_rename(path)

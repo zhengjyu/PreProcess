@@ -12,7 +12,7 @@ def paint_video_txt(video_path, annotations_txt, show_anno=1):
             annotations = f.readlines()
     for i in range(len(images)):
         image = images[i]
-        rect = annotations[i].split(',')
+        rect = annotations[i].strip('\n').split(',')
         im = cv2.imread(os.path.join(video_path, image))
         if show_anno:
             x1 = int(rect[0])
